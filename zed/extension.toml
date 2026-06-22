@@ -1,0 +1,10 @@
+id = "mcp-server-zeroheight"
+name = "zeroheight MCP"
+description = "Use your design system directly in Zed. Search components, retrieve implementation guidance, and generate code that reflects your design system."
+version = "0.0.1"
+schema_version = 1
+authors = ["zeroheight team <support@zeroheight.com>"]
+repository = "https://github.com/zeroheight/ai-plugins"
+
+[context_servers.mcp-server-zeroheight]
+name = "zeroheight MCP"
