@@ -1,7 +1,7 @@
 {
   "name": "zeroheight",
   "version": "0.0.1",
-  "description": "Connect Cursor to your zeroheight design system. Pull components, patterns, usage guidance, and design tokens straight from your styleguide via the zeroheight MCP server.",
+  "description": "Use your design system directly in Cursor. Search components, retrieve implementation guidance, and generate code that reflects your design system.",
   "author": {
     "name": "zeroheight",
     "email": "support@zeroheight.com"
