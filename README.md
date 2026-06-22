@@ -1,31 +1,31 @@
-# zeroheight plugin for Cursor
+# ai-plugins
 
-Connect Cursor to your [zeroheight](https://zeroheight.com) design system. This
-plugin registers the zeroheight MCP server so Cursor's agent can pull components,
-patterns, usage guidance, and design tokens directly from your styleguide.
+Bring your [zeroheight](https://zeroheight.com) design system into your favourite
+AI coding tools. These plugins connect your editor to zeroheight so the AI can
+reach for your components, patterns, usage guidance, and design tokens while it
+works, straight from your styleguide.
 
-## What's included
+## Cursor
 
-- **MCP server** (`mcp.json`) — connects to the hosted zeroheight MCP server at
-  `https://mcp.zeroheight.com/mcp`.
-- **Rule** (`rules/zeroheight.mdc`) — tells the agent to treat the styleguide as
-  the source of truth for UI work and to look up components and tokens before
-  writing code.
+Connects Cursor to zeroheight. The first time you use it, Cursor opens a browser
+so you can sign in.
 
-## Authentication
+What's included:
 
-The hosted MCP server uses OAuth. The first time the server is used, Cursor opens
-a browser window to sign in to zeroheight and authorize access — no tokens or
-environment variables to configure.
+- **MCP server** (`cursor/mcp.json`): the connection to zeroheight.
+- **Rule** (`cursor/rules/zeroheight.mdc`): nudges the AI to treat your
+  styleguide as the source of truth and look things up before writing UI code.
 
-## Installation
+Install it from the Cursor plugin store, or point Cursor at this repository.
 
-Install from the Cursor plugin store, or add it manually by pointing Cursor at this
-repository.
+## Zed
+
+A Zed extension that runs the zeroheight MCP server for you. See
+[`zed/README.md`](zed/README.md) for setup.
 
 ## Usage
 
-Once connected, ask the agent about your design system, for example:
+Once connected, just ask the AI about your design system:
 
 - "What button variants are available in our design system?"
 - "Use our design tokens for the spacing on this card."
