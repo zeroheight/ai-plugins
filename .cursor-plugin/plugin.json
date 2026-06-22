@@ -1,0 +1,22 @@
+{
+  "name": "zeroheight",
+  "version": "0.0.1",
+  "description": "Connect Cursor to your zeroheight design system. Pull components, patterns, usage guidance, and design tokens straight from your styleguide via the zeroheight MCP server.",
+  "author": {
+    "name": "zeroheight",
+    "email": "support@zeroheight.com"
+  },
+  "homepage": "https://zeroheight.com",
+  "repository": "https://github.com/zeroheight/ai-plugins",
+  "license": "MIT",
+  "keywords": [
+    "zeroheight",
+    "design-system",
+    "design-tokens",
+    "mcp",
+    "documentation"
+  ],
+  "logo": "assets/logo.svg",
+  "rules": "cursor/rules",
+  "mcpServers": "cursor/mcp.json"
+}
