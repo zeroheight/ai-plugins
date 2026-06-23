@@ -1,0 +1,17 @@
+---
+description: Use the zeroheight design system as the source of truth for UI work
+alwaysApply: false
+---
+
+When building, modifying, or reviewing UI — components, pages, styles, theming,
+or anything touching color, spacing, typography, radius, shadow, or motion — treat
+the connected zeroheight styleguide as the source of truth, and consult it via the
+`zeroheight` MCP server before writing code.
+
+- Never invent component names, prop names, variants, token names, or token values —
+  look them up in the styleguide first.
+- If a component, prop, pattern, or token is not documented in the styleguide, say so
+  explicitly rather than guessing.
+- zeroheight documents the design intent and usage rules ("which component and when");
+  follow any Storybook links it surfaces for the runtime API (exact props, types, and
+  runnable examples) rather than going to Storybook first.

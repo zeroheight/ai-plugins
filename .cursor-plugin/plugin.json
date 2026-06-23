@@ -1,0 +1,22 @@
+{
+  "name": "zeroheight",
+  "version": "0.0.1",
+  "description": "Use your design system directly in Cursor. Search components, retrieve implementation guidance, and generate code that reflects your design system.",
+  "author": {
+    "name": "zeroheight",
+    "email": "support@zeroheight.com"
+  },
+  "homepage": "https://zeroheight.com",
+  "repository": "https://github.com/zeroheight/ai-plugins",
+  "license": "MIT",
+  "keywords": [
+    "zeroheight",
+    "design-system",
+    "design-tokens",
+    "mcp",
+    "documentation"
+  ],
+  "logo": "assets/logo.svg",
+  "rules": "cursor/rules",
+  "mcpServers": "cursor/mcp.json"
+}
