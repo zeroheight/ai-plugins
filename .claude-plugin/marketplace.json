@@ -1,0 +1,15 @@
+{
+  "name": "zeroheight",
+  "owner": {
+    "name": "zeroheight",
+    "email": "support@zeroheight.com"
+  },
+  "description": "zeroheight plugins for Claude Code. Bring your design system into Claude Code.",
+  "plugins": [
+    {
+      "name": "zeroheight-mcp",
+      "source": "./claude-code",
+      "description": "Use your design system directly in Claude Code. Search components, retrieve implementation guidance, and generate code that reflects your design system."
+    }
+  ]
+}
