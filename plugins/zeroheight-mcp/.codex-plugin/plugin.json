@@ -4,7 +4,8 @@
   "description": "Use your design system directly in Codex. Search components, retrieve implementation guidance, and generate code that reflects your design system.",
   "author": {
     "name": "zeroheight",
-    "email": "support@zeroheight.com"
+    "email": "support@zeroheight.com",
+    "url": "https://zeroheight.com"
   },
   "homepage": "https://zeroheight.com",
   "repository": "https://github.com/zeroheight/ai-plugins",
@@ -23,6 +24,7 @@
     "longDescription": "Use your design system directly in Codex. Search components, retrieve implementation guidance, and generate code that reflects your design system.",
     "developerName": "zeroheight",
     "category": "Developer Tools",
+    "websiteURL": "https://zeroheight.com",
     "capabilities": [
       "Read"
     ],
