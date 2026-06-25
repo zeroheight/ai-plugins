@@ -23,6 +23,30 @@ Install it from the Cursor plugin store, or point Cursor at this repository.
 A Zed extension that runs the zeroheight MCP server for you. See
 [`zed/README.md`](zed/README.md) for setup.
 
+## Codex
+
+Connects the [Codex CLI](https://developers.openai.com/codex/) to zeroheight via
+a plugin.
+
+What's included:
+
+- **MCP server** (`plugins/zeroheight-mcp/.mcp.json`): the connection to
+  zeroheight. Codex reads the server's own guidance, so it treats your
+  styleguide as the source of truth when working on UI.
+
+Add this repository as a plugin marketplace, then install the plugin:
+
+```
+codex plugin marketplace add zeroheight/ai-plugins
+codex plugin add zeroheight-mcp@zeroheight
+```
+
+Then sign in to zeroheight (this opens a browser):
+
+```
+codex mcp login zeroheight
+```
+
 ## Usage
 
 Once connected, just ask the AI about your design system:

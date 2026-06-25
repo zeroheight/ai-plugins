@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "zeroheight": {
+      "type": "http",
+      "url": "https://mcp.zeroheight.com/mcp",
+      "oauth_resource": "https://mcp.zeroheight.com/mcp"
+    }
+  }
+}

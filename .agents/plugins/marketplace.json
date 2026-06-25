@@ -1,0 +1,20 @@
+{
+  "name": "zeroheight",
+  "interface": {
+    "displayName": "zeroheight"
+  },
+  "plugins": [
+    {
+      "name": "zeroheight-mcp",
+      "source": {
+        "source": "local",
+        "path": "./plugins/zeroheight-mcp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
