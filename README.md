@@ -47,6 +47,24 @@ Then sign in to zeroheight (this opens a browser):
 codex mcp login zeroheight
 ```
 
+## Claude Code
+
+Connects Claude Code to zeroheight via a plugin. The first time you use it,
+Claude Code opens a browser so you can sign in.
+
+What's included:
+
+- **MCP server** (`claude-code/.mcp.json`): the connection to zeroheight. Claude
+  Code surfaces the server's own guidance automatically, so it treats your
+  styleguide as the source of truth when working on UI.
+
+Add this repository as a plugin marketplace, then install the plugin:
+
+```
+/plugin marketplace add zeroheight/ai-plugins
+/plugin install zeroheight-mcp@zeroheight
+```
+
 ## Usage
 
 Once connected, just ask the AI about your design system:
