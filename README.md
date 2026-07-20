@@ -81,8 +81,6 @@ Or just ask — e.g. "audit our design system docs for machine-readability".
 
 ## Claude desktop app (Cowork)
 
-The same plugin works in the Claude desktop app:
-
 1. Open the **Plugins** panel (the **+** menu → **Plugins** → **Manage Plugins**).
 2. Choose **Add** → **Marketplace** → **Add from a repository** and enter
    `zeroheight/ai-plugins`.
