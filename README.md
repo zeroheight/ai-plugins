@@ -47,23 +47,52 @@ Then sign in to zeroheight (this opens a browser):
 codex mcp login zeroheight
 ```
 
-## Claude Code
+## Claude Code and the Claude desktop app (Cowork)
 
-Connects Claude Code to zeroheight via a plugin. The first time you use it,
-Claude Code opens a browser so you can sign in.
+Connects Claude to zeroheight via a plugin. Works in both the Claude Code CLI
+and the Claude desktop app.
 
 What's included:
 
 - **MCP server** (`claude-code/.mcp.json`): the connection to zeroheight. Claude
   Code surfaces the server's own guidance automatically, so it treats your
   styleguide as the source of truth when working on UI.
+- **DSDS audit** (`claude-code/skills/dsds-audit/`, `/audit-docs`): audits your
+  styleguide's documentation for machine-readability against the
+  [Design System Documentation Spec](https://designsystemdocspec.org) and
+  returns a prioritised, page-by-page list of authoring moves plus
+  ready-to-paste segments.
+
+### Install in the terminal (Claude Code CLI)
 
 Add this repository as a plugin marketplace, then install the plugin:
 
 ```
-/plugin marketplace add zeroheight/ai-plugins
-/plugin install zeroheight-mcp@zeroheight
+claude plugin marketplace add zeroheight/ai-plugins
+claude plugin install zeroheight-mcp@zeroheight
 ```
+
+### Install in the desktop app (Cowork)
+
+1. Open the **Plugins** panel (the **+** menu → **Plugins** → **Manage Plugins**).
+2. Choose **Add** → **Marketplace** → **Add from a repository** and enter
+   `zeroheight/ai-plugins`.
+3. Find **zeroheight-mcp** in that marketplace and click **Install** (then
+   enable it if it isn't enabled automatically).
+
+The first time you use the plugin, a browser opens so you can sign in with
+your zeroheight account ([MCP via login](https://help.zeroheight.com/hc/en-us/articles/48004395674011)).
+
+### Audit your docs
+
+```
+/audit-docs
+/audit-docs just Components
+```
+
+Or just ask — e.g. "audit our design system docs for machine-readability".
+Built on the [Design System Documentation Spec](https://designsystemdocspec.org)
+by [PJ Onori](https://pjonori.blog).
 
 ## Usage
 
