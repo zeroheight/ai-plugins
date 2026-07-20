@@ -15,6 +15,10 @@ What's included:
 - **MCP server** (`cursor/mcp.json`): the connection to zeroheight.
 - **Rule** (`cursor/rules/zeroheight.mdc`): nudges the AI to treat your
   styleguide as the source of truth and look things up before writing UI code.
+- **DSDS audit** (`skills/dsds-audit/`): audits your styleguide's documentation
+  for machine-readability against the
+  [Design System Documentation Spec](https://designsystemdocspec.org) — see
+  [DSDS audit skill](#dsds-audit-skill).
 
 Install it from the Cursor plugin store, or point Cursor at this repository.
 
@@ -57,11 +61,9 @@ What's included:
 - **MCP server** (`claude-code/.mcp.json`): the connection to zeroheight. Claude
   Code surfaces the server's own guidance automatically, so it treats your
   styleguide as the source of truth when working on UI.
-- **DSDS audit** (`claude-code/skills/dsds-audit/`, `/audit-docs`): audits your
-  styleguide's documentation for machine-readability against the
-  [Design System Documentation Spec](https://designsystemdocspec.org) by
-  [PJ Onori](https://pjonori.blog), and returns a prioritised, page-by-page
-  list of authoring moves plus ready-to-paste segments.
+- **DSDS audit** (`skills/dsds-audit/`, `/audit-docs`): audits your
+  styleguide's documentation for machine-readability — see
+  [DSDS audit skill](#dsds-audit-skill).
 
 Add this repository as a plugin marketplace, then install the plugin:
 
@@ -89,6 +91,25 @@ Or just ask — e.g. "audit our design system docs for machine-readability".
 
 The first time you use the plugin, a browser opens so you can sign in with
 your zeroheight account.
+
+## DSDS audit skill
+
+The `skills/dsds-audit/` skill audits your styleguide's documentation for
+machine-readability against the
+[Design System Documentation Spec](https://designsystemdocspec.org) by
+[PJ Onori](https://pjonori.blog), and returns a prioritised, page-by-page list
+of authoring moves plus ready-to-paste segments.
+
+It ships inside the Cursor and Claude Code plugins above, but you can also
+install it on its own into any agent that supports skills using the
+[skills CLI](https://skills.sh):
+
+```
+npx skills add zeroheight/ai-plugins
+```
+
+The skill needs the zeroheight MCP connection to read your styleguide, so
+install one of the plugins above (or connect the MCP server yourself) first.
 
 ## Usage
 
