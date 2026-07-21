@@ -14,9 +14,12 @@
     "design-system",
     "design-tokens",
     "mcp",
-    "documentation"
+    "documentation",
+    "dsds",
+    "audit"
   ],
   "logo": "assets/logo.svg",
   "rules": "cursor/rules",
+  "skills": "skills",
   "mcpServers": "cursor/mcp.json"
 }

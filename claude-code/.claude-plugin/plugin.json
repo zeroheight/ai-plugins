@@ -1,6 +1,6 @@
 {
   "name": "zeroheight-mcp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Use your design system directly in Claude Code. Search components, retrieve implementation guidance, and generate code that reflects your design system.",
   "author": {
     "name": "zeroheight",
@@ -14,6 +14,8 @@
     "design-system",
     "design-tokens",
     "mcp",
-    "documentation"
+    "documentation",
+    "dsds",
+    "audit"
   ]
 }
