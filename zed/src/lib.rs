@@ -134,3 +134,49 @@ fn merge_setting_env_var(
 }
 
 zed::register_extension!(ZeroheightModelContextExtension);
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use zed::serde_json::{from_value, json, Value};
+
+    fn env_for(settings: Value) -> Result<HashMap<String, String>> {
+        let settings: zed::settings::ContextServerSettings =
+            from_value(settings).expect("test JSON should match Zed's context server settings");
+        Ok(env_vars_from_settings(settings)?.into_iter().collect())
+    }
+
+    #[test]
+    fn settings_override_command_env() {
+        let env = env_for(json!({
+            "command": { "env": { "ZEROHEIGHT_ACCESS_TOKEN": "from-env" } },
+            "settings": { "ZEROHEIGHT_ACCESS_TOKEN": "from-settings" }
+        }))
+        .unwrap();
+
+        assert_eq!(env["ZEROHEIGHT_ACCESS_TOKEN"], "from-settings");
+        assert_eq!(env["ZEROHEIGHT_MCP_CLIENT"], "zed-mcp-plugin");
+    }
+
+    #[test]
+    fn blank_credentials_are_never_passed_to_the_server() {
+        let env = env_for(json!({
+            "command": { "env": {
+                "ZEROHEIGHT_ACCESS_TOKEN": "  ",
+                "ZEROHEIGHT_CLIENT_ID": "client-from-env"
+            } },
+            "settings": { "ZEROHEIGHT_ACCESS_TOKEN": "", "ZEROHEIGHT_CLIENT_ID": "" }
+        }))
+        .unwrap();
+
+        assert!(!env.contains_key("ZEROHEIGHT_ACCESS_TOKEN"));
+        assert_eq!(env["ZEROHEIGHT_CLIENT_ID"], "client-from-env");
+    }
+
+    #[test]
+    fn non_string_setting_is_rejected() {
+        let err = env_for(json!({ "settings": { "ZEROHEIGHT_ACCESS_TOKEN": 123 } })).unwrap_err();
+
+        assert!(err.contains("ZEROHEIGHT_ACCESS_TOKEN"), "{err}");
+    }
+}

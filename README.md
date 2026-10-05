@@ -118,3 +118,14 @@ Once connected, just ask the AI about your design system:
 - "What button variants are available in our design system?"
 - "Use our design tokens for the spacing on this card."
 - "Find the documentation page for our modal component."
+
+## Development
+
+CI runs on every pull request (`.github/workflows/ci.yml`). To run the same
+checks locally:
+
+```
+node --test
+claude plugin validate .
+(cd zed && cargo test)
+```
