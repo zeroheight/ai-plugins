@@ -141,7 +141,8 @@ mod tests {
     use zed::serde_json::{from_value, json, Value};
 
     fn env_for(settings: Value) -> Result<HashMap<String, String>> {
-        let settings = from_value(settings).expect("valid context server settings");
+        let settings: zed::settings::ContextServerSettings =
+            from_value(settings).expect("test JSON should match Zed's context server settings");
         Ok(env_vars_from_settings(settings)?.into_iter().collect())
     }
 
